@@ -4,13 +4,15 @@
   </span>
   <span class="spacer"></span>
   <span>
-    <a class="nav-link" mat-button href="https://github.com/pikselinweb/ngx-fittext" target="_blank"
-      rel="noopener noreferrer">
+    <a
+      class="nav-link"
+      mat-button
+      href="https://github.com/pikselinweb/ngx-fittext"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       Github Repo
     </a>
-    <!-- <a mat-button>
-      Github Repo
-    </a> -->
   </span>
 </mat-toolbar>
 <div class="container py-4">
@@ -20,46 +22,130 @@
     </pre>
   </div>
   <div class="row">
-    <div class="col-lg-5 pb-3">
-      <div class="pb-4">
-        <button mat-raised-button color="primary" (click)="basicRandom()">
-          Random Text
-        </button>
-        <div class="d-inline px-3">
-          <strong class="text-info">Font Size:</strong>&nbsp;
-          <span>{{ fontSize }} px</span>
-        </div>
-      </div>
-      <mat-card>
-        <fit-text [text]="basic" (resized)="newFontSize($event)" width="100%" height="500px" maxFontSize="140px"
-          minFontSize="6px" delay="120" [middle]="true" [showLogs]="true"></fit-text>
-      </mat-card>
+    <div class="col-md-6 py-3">
+      <mat-tab-group>
+        <mat-tab label="Preview">
+          <div class="py-3">
+            <button mat-raised-button color="primary" (click)="basicRandom()">
+              Random Text
+            </button>
+            <div class="d-inline px-3">
+              <strong class="text-info">Font Size:</strong>&nbsp;
+              <span>{{ fontSize }} px</span>
+            </div>
+          </div>
+          <mat-card style="overflow: hidden;">
+            <div mat-card-image>
+              <div
+                class="py-3"
+                style="background-color: #f1f1f1; text-align: center;"
+              >
+                <h2 class="m-0" style="font-weight: 500;">
+                  Fit Text Example
+                </h2>
+              </div>
+            </div>
+            <fit-text
+              [text]="basic"
+              (resized)="newFontSize($event)"
+              width="100%"
+              height="450px"
+              maxFontSize="140px"
+              minFontSize="6px"
+              delay="120"
+              [middle]="true"
+              [showLogs]="true"
+            ></fit-text>
+          </mat-card>
+        </mat-tab>
+        <mat-tab label="Code">
+          <div>
+            <div>
+              <pre>
+                <code [highlight]="code.basic | codeFromUrl | async"></code>
+              </pre>
+            </div>
+            <div>
+              <pre>
+                <code [highlight]="code.full | codeFromUrl | async"></code>
+              </pre>
+            </div>
+            <div>
+              <pre>
+                <code [highlight]="code.fullts | codeFromUrl | async"></code>
+              </pre>
+            </div>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
     </div>
-    <div class="col">
-      <div>
-        <pre>
-          <code [highlight]="code.basic | codeFromUrl | async"></code>
-        </pre>
-      </div>
-      <div>
-        <pre>
-          <code [highlight]="code.full | codeFromUrl | async"></code>
-        </pre>
-      </div>
-      <div>
-        <pre>
-          <code [highlight]="code.fullts | codeFromUrl | async"></code>
-        </pre>
-      </div>
+    <div class="col-md-6 py-3">
+      <mat-tab-group>
+        <mat-tab label="Preview">
+          <div>
+            <div class="py-3">
+              <button
+                mat-raised-button
+                color="primary"
+                (click)="resizeRandom()"
+              >
+                Random Text
+              </button>
+              <div class="d-inline px-3">
+                <strong class="text-info">Font Size:</strong>&nbsp;
+                <span>{{ wfontSize }} px</span>
+              </div>
+            </div>
+            <mat-card style="overflow: hidden;">
+              <div mat-card-image>
+                <div
+                  class="py-3"
+                  style="background-color: #f1f1f1; text-align: center;"
+                >
+                  <h2 class="m-0" style="font-weight: 500;">
+                    Fit On Resize Window Event
+                  </h2>
+                </div>
+              </div>
+              <fit-text-windowresize
+                [text]="wResize"
+                (resized)="wnewFontSize($event)"
+                width="100%"
+                height="450px"
+                maxFontSize="140px"
+                minFontSize="6px"
+                delay="120"
+                [middle]="true"
+                [showLogs]="false"
+              ></fit-text-windowresize>
+            </mat-card>
+          </div>
+        </mat-tab>
+        <mat-tab label="Code">
+          <div>
+            <div>
+              <pre>
+                <code [highlight]="code.resizeBasic | codeFromUrl | async"></code>
+              </pre>
+            </div>
+            <div>
+              <pre>
+                <code [highlight]="code.resizeFull | codeFromUrl | async"></code>
+              </pre>
+            </div>
+            <div>
+              <pre>
+                <code [highlight]="code.fullts | codeFromUrl | async"></code>
+              </pre>
+            </div>
+          </div>
+        </mat-tab>
+      </mat-tab-group>
     </div>
   </div>
 </div>
 
 <div class="container py-3">
-  <div class="my-3 alert p-3 mat-elevation-z2">
-    If you want to resize text on window resize event use fit-text-windowresize
-    selector instead of fit-text.
-  </div>
   <mat-card>
     <table class="table table-striped">
       <thead>

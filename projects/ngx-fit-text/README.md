@@ -1,24 +1,84 @@
-# NgxFitText
+# Ngx-FitText
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
+ngx-fittext is a simple component that fit text into the div.
 
-## Code scaffolding
+[Demo Page](https://pikselinweb.github.io/ngx-fittext/)
 
-Run `ng generate component component-name --project NgxFitText` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project NgxFitText`.
-> Note: Don't forget to add `--project NgxFitText` or else it will be added to the default project in your `angular.json` file. 
+![Fit Text](/src/assets/fittextgif.gif 'Preview Fit Text')
 
-## Build
+## Import Module
 
-Run `ng build NgxFitText` to build the project. The build artifacts will be stored in the `dist/` directory.
+```ts
+import { NgxFitTextModule } from 'ngx-fit-text';
 
-## Publishing
+@NgModule({
+imports: [
+// other modules
+NgxFitTextModule
+]
+})
+```
 
-After building your library with `ng build NgxFitText`, go to the dist folder `cd dist/ngx-fit-text` and run `npm publish`.
+## Basic Usage
 
-## Running unit tests
+```html
+<fit-text [text]="'Lorem Impsum'"></fit-text>
+```
 
-Run `ng test NgxFitText` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Full Features
 
-## Further help
+```html
+<fit-text
+  [text]="'Lorem Impsum'"
+  (resized)="newFontSize($event)"
+  height="800px"
+  width="100%"
+  maxFontSize="140px"
+  minFontSize="12px"
+  [delay]="120"
+  [middle]="true"
+  [showLogs]="true"
+>
+</fit-text>
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Get Font Size In Compenent
+
+```ts
+ newFontSize(fSize: number) {
+    console.log(fSize);
+    // this.fontSize = fSize;
+    return fSize;
+  }
+```
+
+> If you want to resize text on window resize event use fit-text-windowresize selector instead of fit-text.
+
+```html
+<fit-text-windowresize
+  [text]="'Lorem Impsum'"
+  (resized)="newFontSize($event)"
+  height="800px"
+  width="100%"
+  maxFontSize="140px"
+  minFontSize="12px"
+  [delay]="120"
+  [middle]="true"
+  [showLogs]="true"
+>
+</fit-text-windowresize>
+```
+
+## Options
+
+| Option        | Type           | Description                                                                                                                                 |
+| ------------- | -------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| [text]        | string         | You can pass string values to display in fit component. When you pass new value component will be updated.                                  |
+| [height]      | px, em, %, etc | Set to component fixed height.                                                                                                              |
+| [width]       | px, em, %, etc | Set to component fixed width. Default value is '100%'                                                                                       |
+| [maxFontSize] | px             | Set maximum font size of component                                                                                                          |
+| [minFontSize] | px             | Set minimum font size of component. Not recommend, text may overflow                                                                        |
+| [middle]      | boolean        | Work only in fixed height, text will vertical align to middle                                                                               |
+| [delay]       | number         | If you use animation or lazy load, component height may render as 0. To avoid this, you can pass number to delay. Defalt value is 100 (ms). |
+| [showLogs]    | boolean        | Show changes in console step by step                                                                                                        |
+| (resized)     | output         | Fire event that return new font size when text resized. Simple usage : (resized)="fooFunction(\$event)"                                     |
