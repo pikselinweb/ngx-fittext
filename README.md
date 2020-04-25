@@ -1,7 +1,9 @@
 # Ngx-FitText
 
 ngx-fittext is a simple component that fit text into the div.
-[Demo Page](https://pikselinweb.github.io/ngx-fittext/)
+
+[Demo Page](https://pikselinweb.github.io/ngx-fittext/?target=_blank)
+
 ![Fit Text](/src/assets/fittextgif.gif 'Preview Fit Text')
 
 ## Import Module
@@ -11,7 +13,7 @@ import { NgxFitTextModule } from 'ngx-fit-text';
 
 @NgModule({
 imports: [
-...
+// other modules
 NgxFitTextModule
 ]
 })
@@ -80,7 +82,3 @@ NgxFitTextModule
 | [delay]       | number         | If you use animation or lazy load, component height may render as 0. To avoid this, you can pass number to delay. Defalt value is 100 (ms). |
 | [showLogs]    | boolean        | Show changes in console step by step                                                                                                        |
 | (resized)     | output         | Fire event that return new font size when text resized. Simple usage : (resized)="fooFunction(\$event)"                                     |
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
