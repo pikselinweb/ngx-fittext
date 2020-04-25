@@ -192,6 +192,7 @@ SOFTWARE.
 
 
 ngx-fittext
+MIT
 
 ngx-highlightjs
 MIT
