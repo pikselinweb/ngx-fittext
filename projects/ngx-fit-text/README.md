@@ -2,7 +2,7 @@
 
 ngx-fittext is a simple component that fit text into the div.
 
-[Demo Page](https://pikselinweb.github.io/ngx-fittext/) | [Stackblitz Example](https://pikselinweb.github.io/ngx-fittext/)
+[Demo Page](https://pikselinweb.github.io/ngx-fittext/) | [Stackblitz Example](https://stackblitz.com/edit/ngx-fittext)
 
 ![Fit Text](https://raw.githubusercontent.com/pikselinweb/ngx-fittext/HEAD/src/assets/fittextgif.gif 'Preview Fit Text')
 
