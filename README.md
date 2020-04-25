@@ -4,7 +4,13 @@ ngx-fittext is a simple component that fit text into the div.
 
 [Demo Page](https://pikselinweb.github.io/ngx-fittext/) | [Stackblitz Example](https://pikselinweb.github.io/ngx-fittext/)
 
-![Fit Text](/src/assets/fittextgif.gif "Preview Fit Text")
+![Fit Text](/src/assets/fittextgif.gif 'Preview Fit Text')
+
+## Install Package
+
+```sh
+npm i -S @pikselin/ngx-fittext
+```
 
 ## Import Module
 

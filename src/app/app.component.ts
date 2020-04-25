@@ -12,6 +12,8 @@ export class AppComponent {
   fontSize: number;
   wfontSize: number;
   code = {
+    install:
+      'https://gist.githubusercontent.com/pikselinweb/81ec1becf4179f850dbf7214baeab123/raw/7aaeb38db34baeb33654d2c2a03c19acbe221083/install.sh',
     basic:
       'https://gist.githubusercontent.com/pikselinweb/81ec1becf4179f850dbf7214baeab123/raw/47c67f465d658e1ae44e7eb3589487780f056a5f/basic.html',
     full:
@@ -19,7 +21,7 @@ export class AppComponent {
     fullts:
       'https://gist.githubusercontent.com/pikselinweb/81ec1becf4179f850dbf7214baeab123/raw/18c18cb0f5de3ad59f490a9ce9fea3b550128069/full.ts',
     module:
-      'https://gist.githubusercontent.com/pikselinweb/81ec1becf4179f850dbf7214baeab123/raw/f65f716c9361a78d1db6d4ba8d0f056fb28fb623/module.ts',
+      'https://gist.githubusercontent.com/pikselinweb/81ec1becf4179f850dbf7214baeab123/raw/7aaeb38db34baeb33654d2c2a03c19acbe221083/module.ts',
     resizeBasic:
       'https://gist.githubusercontent.com/pikselinweb/81ec1becf4179f850dbf7214baeab123/raw/f915bf0ea2584e805f9217df975ca19f68fe3850/window-resize-basic.html',
     resizeFull:
