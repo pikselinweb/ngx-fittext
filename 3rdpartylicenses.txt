@@ -85,6 +85,9 @@ THE SOFTWARE.
 @angular/platform-browser
 MIT
 
+@pikselin/ngx-fittext
+MIT
+
 core-js
 MIT
 Copyright (c) 2014-2020 Denis Pushkarev
@@ -190,9 +193,6 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 
-
-ngx-fittext
-MIT
 
 ngx-highlightjs
 MIT
