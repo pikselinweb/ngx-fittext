@@ -1,0 +1,143 @@
+<mat-toolbar color="primary">
+  <span>
+    <img src="assets/logo.png" alt="ngx-fittext" />
+  </span>
+  <span class="spacer"></span>
+  <span>
+    <a class="nav-link" mat-button href="https://github.com/pikselinweb/ngx-fittext" target="_blank"
+      rel="noopener noreferrer">
+      Github Repo
+    </a>
+    <!-- <a mat-button>
+      Github Repo
+    </a> -->
+  </span>
+</mat-toolbar>
+<div class="container py-4">
+  <div>
+    <pre>
+      <code [highlight]="code.module | codeFromUrl | async"></code>
+    </pre>
+  </div>
+  <div class="row">
+    <div class="col-lg-5 pb-3">
+      <div class="pb-4">
+        <button mat-raised-button color="primary" (click)="basicRandom()">
+          Random Text
+        </button>
+        <div class="d-inline px-3">
+          <strong class="text-info">Font Size:</strong>&nbsp;
+          <span>{{ fontSize }} px</span>
+        </div>
+      </div>
+      <mat-card>
+        <fit-text [text]="basic" (resized)="newFontSize($event)" width="100%" height="500px" maxFontSize="140px"
+          minFontSize="6px" delay="120" [middle]="true" [showLogs]="true"></fit-text>
+      </mat-card>
+    </div>
+    <div class="col">
+      <div>
+        <pre>
+          <code [highlight]="code.basic | codeFromUrl | async"></code>
+        </pre>
+      </div>
+      <div>
+        <pre>
+          <code [highlight]="code.full | codeFromUrl | async"></code>
+        </pre>
+      </div>
+      <div>
+        <pre>
+          <code [highlight]="code.fullts | codeFromUrl | async"></code>
+        </pre>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container py-3">
+  <div class="my-3 alert p-3 mat-elevation-z2">
+    If you want to resize text on window resize event use fit-text-windowresize
+    selector instead of fit-text.
+  </div>
+  <mat-card>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">Option</th>
+          <th scope="col">Type</th>
+          <th scope="col">Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>[text]</td>
+          <td>string</td>
+          <td>
+            You can pass string values to display in fit component. When you
+            pass new value component will be updated.
+          </td>
+        </tr>
+        <tr>
+          <td>[height]</td>
+          <td>px, em, %, etc</td>
+          <td>
+            Set to component fixed height.
+          </td>
+        </tr>
+        <tr>
+          <td>[width]</td>
+          <td>px, em, %, etc</td>
+          <td>
+            Set to component fixed width. Default value is '100%'
+          </td>
+        </tr>
+        <tr>
+          <td>[maxFontSize]</td>
+          <td>px</td>
+          <td>
+            Set maximum font size of component
+          </td>
+        </tr>
+        <tr>
+          <td>[minFontSize]</td>
+          <td>px</td>
+          <td>
+            Set minimum font size of component. Not recommend, text may overflow
+          </td>
+        </tr>
+        <tr>
+          <td>[middle]</td>
+          <td>boolean</td>
+          <td>
+            Work only in fixed height, text will vertical align to middle
+          </td>
+        </tr>
+        <tr>
+          <td>[delay]</td>
+          <td>number</td>
+          <td>
+            If you use animation or lazy load, component height may render as 0.
+            To avoid this, you can pass number to delay. Defalt value is 100
+            (ms).
+          </td>
+        </tr>
+        <tr>
+          <td>[showLogs]</td>
+          <td>boolean</td>
+          <td>
+            Show changes in console step by step
+          </td>
+        </tr>
+        <tr>
+          <td>(resized)</td>
+          <td>output</td>
+          <td>
+            Fire event that return new font size when text resized. Simple usage
+            : (resized)="fooFunction($event)"
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </mat-card>
+</div>

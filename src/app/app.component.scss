@@ -1,0 +1,11 @@
+.alert {
+  background-color: rgba($color: #fff, $alpha: 0.6);
+}
+
+.nav-link {
+  text-decoration: none;
+
+  &:hover {
+    color: #f7f7f7;
+  }
+}
