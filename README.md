@@ -4,7 +4,7 @@
 
 
 
-[Demo Page](https://pikselinweb.github.io/ngx-fittext/) | [Stackblitz Example](https://stackblitz.com/edit/ngx-fittext)
+[Demo Page](https://ngx-fittext.vercel.app) | [Stackblitz Example](https://stackblitz.com/edit/ngx-fittextv2)
 
 > You can see in examples Angular Material components like __mat-card__. These are not required. It is only for showing examples clearly in demo page.
 
