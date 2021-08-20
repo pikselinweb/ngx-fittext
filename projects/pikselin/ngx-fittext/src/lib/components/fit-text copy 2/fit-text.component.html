@@ -1,0 +1,14 @@
+<div
+  #wrapperDiv
+  style="position: relative;background-color: antiquewhite;"
+  [style.width]="width || '100%'"
+  [style.height]="height"
+>
+  <div
+    #controllerDiv
+    [style.lineHeight]="lineHeight"
+    style="width: 100%; position: absolute;display: inline-flex;"
+  >
+    <ng-content></ng-content>
+  </div>
+</div>

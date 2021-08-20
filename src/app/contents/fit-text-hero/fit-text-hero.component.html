@@ -1,0 +1,148 @@
+<section class="my-3">
+  <h2>Fitting Text in the Box</h2>
+  <p>
+    If you need to fit text into the box you could use
+    <b>fit-text</b> component. <b>fit-text</b> component's display is flex. To
+    align items, justify content you could use <code>style</code> tag.
+    <b>height</b> is required params for <b>fit-text</b> component.
+  </p>
+  <div class="alert alert-warning">
+    Using line-height in style may cause vertical align problems. Please take a
+    care when styling, if styling block calculating component wont work
+    correctly.
+  </div>
+  <h3>Simple Usage</h3>
+  <mat-tab-group>
+    <mat-tab label="Example">
+      <mat-card class="my-3" style="width:400px">
+        <fit-text height="200px" [stepSize]="1" style="align-items: center;">
+          Aliquam erat volutpat. Curabitur et tincidunt nisl. Nunc non
+          pellentesque erat. Ut non dignissim nunc. Aenean condimentum venenatis
+          augue vel ultricies. Ut consequat egestas purus.
+        </fit-text>
+      </mat-card>
+    </mat-tab>
+    <mat-tab label="Code">
+      <div class="my-3">
+        <pre>
+        <code [highlight]="simpleUsage" lang="html"></code>
+      </pre>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+
+  <h3 class="mt-3">CMYK Colors With Fit Box Component</h3>
+
+  <mat-tab-group>
+    <mat-tab label="Example">
+      <div
+        style="
+          width: 500px;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+        "
+        class="my-3"
+      >
+        <fit-text
+          height="250px"
+          width="250px"
+          style="
+            background-color: cyan;
+            justify-content: center;
+            align-items: center;
+          "
+          >C</fit-text
+        >
+        <fit-text
+          height="250px"
+          width="250px"
+          style="
+            background-color: magenta;
+            justify-content: center;
+            align-items: center;
+          "
+          >M</fit-text
+        >
+        <fit-text
+          height="250px"
+          width="250px"
+          style="
+            background-color: yellow;
+            justify-content: center;
+            align-items: center;
+          "
+          >Y</fit-text
+        >
+        <fit-text
+          height="250px"
+          width="250px"
+          style="
+            background-color: black;
+            color: #efefef;
+            justify-content: center;
+            align-items: center;
+          "
+          >K</fit-text
+        >
+      </div>
+    </mat-tab>
+    <mat-tab label="Code">
+      <div class="my-3">
+        <pre>
+        <code [highlight]="fitBoxExample1" lang="html"></code>
+      </pre>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+  <h3 class="mt-3">Changing Content Dynamically</h3>
+  As like as <b>fit-line</b> component if you change content dynamicly you need
+  to refresh the <b>fit-text</b> component. You could do this by using ViewChild
+  in Angular.
+  <mat-tab-group>
+    <mat-tab label="Example">
+      <div
+        class="mat-elevation-z5 m-3"
+        style="
+          padding: 10px;
+          background-color: #efefef;
+          width: 600px;
+          margin-top: 30px;
+          border-radius: 6px;
+        "
+      >
+        <img src="assets/ataturk-ders.jpg" alt="Atatürk ders dinlerken" />
+        <div
+          style="background-color: #fafafa; border-radius: 6px; padding: 10px"
+          class="mt-3"
+        >
+          <fit-text
+            #dynamicFitText
+            height="200px"
+            width="560px"
+            style="justify-content: center; align-items: center"
+            >{{ ataturkQuote }}</fit-text
+          >
+        </div>
+      </div>
+      <div class="my-3">
+        <button mat-raised-button color="primary" (click)="setRandomQuote()">
+          Random Ataturk Quote
+        </button>
+      </div>
+    </mat-tab>
+    <mat-tab label="component.html">
+      <div class="m-3">
+        <pre>
+      <code [highlight]="fitBoxExampleHtml" lang="html"></code>
+    </pre>
+      </div>
+    </mat-tab>
+    <mat-tab label="component.ts">
+      <div class="m-3">
+        <pre>
+      <code [highlight]="fitBoxExampleTs" lang="ts"></code>
+    </pre>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
+</section>

@@ -1,0 +1,27 @@
+{
+  "name": "@pikselin/ngx-fittext",
+  "author": "Gökhan Duman",
+  "version": "2.0.0",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/pikselinweb/ngx-fittext.git"
+  },
+  "homepage": "https://pikselinweb.github.io/ngx-fittext/",
+  "keywords": [
+    "angular",
+    "angular fit text",
+    "angular resize text",
+    "fit text",
+    "resize text",
+    "ngx fittext",
+    "ngx fit text"
+  ],
+  "peerDependencies": {
+    "@angular/common": "^12.1.0",
+    "@angular/core": "^12.1.0"
+  },
+  "dependencies": {
+    "tslib": "^2.2.0"
+  }
+}
