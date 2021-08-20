@@ -13,7 +13,8 @@ export class AppComponent {
   wfontSize: number;
   code = {
     install:
-      'https://gist.githubusercontent.com/pikselinweb/81ec1becf4179f850dbf7214baeab123/raw/7aaeb38db34baeb33654d2c2a03c19acbe221083/install.sh',
+      // 'https://gist.githubusercontent.com/pikselinweb/81ec1becf4179f850dbf7214baeab123/raw/7aaeb38db34baeb33654d2c2a03c19acbe221083/install.sh',
+      'https://gist.githubusercontent.com/pikselinweb/81ec1becf4179f850dbf7214baeab123/raw/27d996d9bec324c4d16ef93fd1b40b837eefbd80/install.sh',
     basic:
       'https://gist.githubusercontent.com/pikselinweb/81ec1becf4179f850dbf7214baeab123/raw/47c67f465d658e1ae44e7eb3589487780f056a5f/basic.html',
     full:
