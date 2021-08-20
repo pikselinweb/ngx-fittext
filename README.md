@@ -9,7 +9,7 @@ ngx-fittext is a simple component that fit text into the div.
 ## Install Package
 
 ```sh
-npm i -S @pikselin/ngx-fittext
+npm i @pikselin/ngx-fittext@1.0.5
 ```
 
 ## Import Module
