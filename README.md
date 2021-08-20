@@ -88,3 +88,9 @@ NgxFitTextModule
 | [delay]       | number         | If you use animation or lazy load, component height may render as 0. To avoid this, you can pass number to delay. Defalt value is 100 (ms). |
 | [showLogs]    | boolean        | Show changes in console step by step                                                                                                        |
 | (resized)     | output         | Fire event that return new font size when text resized. Simple usage : (resized)="fooFunction(\$event)"                                     |
+
+## Build Library
+
+```shell
+ng build NgxFitText
+```
